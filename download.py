@@ -13,10 +13,12 @@ def download(path=join(gettempdir(), _filename)):
     return path
 
 def _url():
-    return 'http://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&fdate='+_today()+'06&row=436&col=181&lang=pl'
+    return 'http://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&fdate='+_timestamp()+'&row=436&col=181&lang=pl'
 
-def _today():
-    return datetime.today().strftime('%Y%m%d')
+def _timestamp():
+    today = datetime.today()
+    hour  = '00' if today.hour < 12 else '12'
+    return today.strftime('%Y%m%d') + hour
 
 if __name__ == '__main__':
     stdout.write('{}\n'.format(download()))

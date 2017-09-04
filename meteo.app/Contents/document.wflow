@@ -104,12 +104,10 @@ end run</string>
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>598.000000:599.000000</string>
+				<string>449.000000:368.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -157,7 +155,7 @@ end run</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}		tell application "Finder" to set b to bounds of window of desktop	tell application "Preview"		set bounds of window 1 to {(item 1 of b) , 22, (item 3 of b) /2, (item 4 of b) }		activate	end tellend run</string>
+					<string>on run {input, parameters}		tell application "Finder" to set b to bounds of window of desktop	tell application "Preview"		set bounds of window 1 to {(item 1 of b), 22, (item 3 of b) / 2, (item 4 of b)}		activate	end tellend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -210,17 +208,15 @@ end run</string>
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
-				<false/>
+				<true/>
 				<key>location</key>
-				<string>598.000000:641.000000</string>
+				<string>449.000000:666.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>action</key>
@@ -316,29 +312,27 @@ end run</string>
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
-				<false/>
+				<true/>
 				<key>location</key>
-				<string>598.000000:683.000000</string>
+				<string>449.000000:964.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
-			<false/>
+			<true/>
 		</dict>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>1C70AAC2-BCEA-400D-B591-4E292A1B9208</key>
+		<key>3EB56DF8-49CB-4EA8-BD8E-062BA956B9D8</key>
 		<dict>
 			<key>from</key>
 			<string>0528692B-02D3-45B9-BB51-5DB2207B9278 - 0528692B-02D3-45B9-BB51-5DB2207B9278</string>
 			<key>to</key>
 			<string>48BC5C46-FFE2-4326-B84D-B43EE889FDB5 - 48BC5C46-FFE2-4326-B84D-B43EE889FDB5</string>
 		</dict>
-		<key>28F976E0-7782-4AB9-AD85-ED657C73C1FE</key>
+		<key>3FBF9147-2E2A-4ED7-9EF6-21C649F52703</key>
 		<dict>
 			<key>from</key>
 			<string>3EDF68D3-731E-4B33-9246-ECFFBF20FA8B - 3EDF68D3-731E-4B33-9246-ECFFBF20FA8B</string>
