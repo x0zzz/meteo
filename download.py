@@ -5,6 +5,8 @@ from datetime import datetime
 from tempfile import gettempdir
 from os.path import join
 from sys import stdout
+from argparse import ArgumentParser
+from subprocess import call
 
 _filename = 'meteo.jpg'
 
@@ -17,8 +19,24 @@ def _url():
 
 def _timestamp():
     today = datetime.today()
-    hour  = '00' if today.hour < 12 else '12'
+    hour  = '00'
     return today.strftime('%Y%m%d') + hour
 
+
+def parse_args():
+    parser = ArgumentParser(description='Download meteogram')
+    parser.add_argument('-d', action='count', dest='debug', help='debug; dd more debug')
+    args = parser.parse_args()
+    return args
+
+def handle_debug(path, level):
+    if level >= 1:
+        print _url()
+    if level >= 2:
+        call(['open', path])
+
 if __name__ == '__main__':
-    stdout.write('{}\n'.format(download()))
+    args = parse_args()
+    path = download()
+    handle_debug(path=path, level=args.debug)
+    stdout.write('{}\n'.format(path))
